@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP Video Stream</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <script src="js/index.js"></script>
+    <video id="videoPlayer" height="420" controls autoplay muted>
+      <source src="http://localhost:8100/s3-video" type="video/mp4" />
+    </video>
+    <label for="myfile">Select a file:</label>
+    <input
+      type="file"
+      id="input"
+      name="file"
+    /><br /><br />
+    <button onclick="uploadMediaToS3()">Upload Media</button>
+  </body>
+</html>
